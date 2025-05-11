@@ -1,0 +1,15 @@
+/* ROI Calculator HubSpot Module Styles */
+
+.roi-calculator-container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px 0;
+  max-width: 1200px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .roi-calculator-container {
+    padding: 10px 0;
+  }
+}

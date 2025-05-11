@@ -1,0 +1,276 @@
+{
+  "title": {
+    "type": "text",
+    "name": "Module Title",
+    "default": "ROI Calculator",
+    "display_width": "half",
+    "help_text": "The title displayed above the calculator"
+  },
+  "show_title": {
+    "type": "boolean",
+    "name": "Show Title",
+    "default": true,
+    "display_width": "half"
+  },
+  "title_color": {
+    "type": "color",
+    "name": "Title Color",
+    "default": { "color": "#2e1d51" },
+    "display_width": "half",
+    "visibility": {
+      "controlling_field": "show_title",
+      "controlling_value_regex": "true",
+      "operator": "EQUAL"
+    }
+  },
+  "title_size": {
+    "type": "number",
+    "name": "Title Font Size (px)",
+    "default": 32,
+    "display_width": "half",
+    "visibility": {
+      "controlling_field": "show_title",
+      "controlling_value_regex": "true",
+      "operator": "EQUAL"
+    }
+  },
+  "title_weight": {
+    "type": "choice",
+    "name": "Title Font Weight",
+    "choices": [
+      ["400", "Normal"],
+      ["500", "Medium"],
+      ["600", "Semi-Bold"],
+      ["700", "Bold"]
+    ],
+    "default": "600",
+    "display_width": "half",
+    "visibility": {
+      "controlling_field": "show_title",
+      "controlling_value_regex": "true",
+      "operator": "EQUAL"
+    }
+  },
+  "title_alignment": {
+    "type": "choice",
+    "name": "Title Alignment",
+    "choices": [
+      ["left", "Left"],
+      ["center", "Center"],
+      ["right", "Right"]
+    ],
+    "default": "center",
+    "display_width": "half",
+    "visibility": {
+      "controlling_field": "show_title",
+      "controlling_value_regex": "true",
+      "operator": "EQUAL"
+    }
+  },
+  "title_margin_bottom": {
+    "type": "number",
+    "name": "Title Bottom Margin (px)",
+    "default": 20,
+    "display_width": "half",
+    "visibility": {
+      "controlling_field": "show_title",
+      "controlling_value_regex": "true",
+      "operator": "EQUAL"
+    }
+  },
+  "description": {
+    "type": "text",
+    "name": "Description",
+    "default": "Calculate how much your organisation can save with our cloud-based Identity and Access Management solution.",
+    "display_width": "full"
+  },
+  "show_description": {
+    "type": "boolean",
+    "name": "Show Description",
+    "default": true,
+    "display_width": "half"
+  },
+  "description_color": {
+    "type": "color",
+    "name": "Description Color",
+    "default": { "color": "#172033" },
+    "display_width": "half",
+    "visibility": {
+      "controlling_field": "show_description",
+      "controlling_value_regex": "true",
+      "operator": "EQUAL"
+    }
+  },
+  "description_size": {
+    "type": "number",
+    "name": "Description Font Size (px)",
+    "default": 16,
+    "display_width": "half",
+    "visibility": {
+      "controlling_field": "show_description",
+      "controlling_value_regex": "true",
+      "operator": "EQUAL"
+    }
+  },
+  "description_margin_bottom": {
+    "type": "number",
+    "name": "Description Bottom Margin (px)",
+    "default": 30,
+    "display_width": "half",
+    "visibility": {
+      "controlling_field": "show_description",
+      "controlling_value_regex": "true",
+      "operator": "EQUAL"
+    }
+  },
+  "calculator_url": {
+    "type": "text",
+    "name": "Calculator URL",
+    "required": true,
+    "default": "https://your-deployed-calculator-url.com",
+    "display_width": "full",
+    "help_text": "The URL where your ROI calculator is hosted"
+  },
+  "initial_height": {
+    "type": "number",
+    "name": "Initial Frame Height (px)",
+    "default": 1200,
+    "display_width": "half",
+    "help_text": "The initial height of the calculator iframe (will adjust automatically)"
+  },
+  "primary_color": {
+    "type": "color",
+    "name": "Primary Theme Color",
+    "default": { "color": "#d60d46" },
+    "display_width": "half",
+    "help_text": "The primary color for the calculator (passed via URL parameter)"
+  },
+  "max_width": {
+    "type": "number",
+    "name": "Maximum Width (px)",
+    "default": 1200,
+    "display_width": "half"
+  },
+  "center_align": {
+    "type": "boolean",
+    "name": "Center Align",
+    "default": true,
+    "display_width": "half",
+    "help_text": "Center the calculator on the page"
+  },
+  "margin_top": {
+    "type": "number",
+    "name": "Top Margin (px)",
+    "default": 40,
+    "display_width": "quarter"
+  },
+  "margin_right": {
+    "type": "number",
+    "name": "Right Margin (px)",
+    "default": 15,
+    "display_width": "quarter"
+  },
+  "margin_bottom": {
+    "type": "number",
+    "name": "Bottom Margin (px)",
+    "default": 40,
+    "display_width": "quarter"
+  },
+  "margin_left": {
+    "type": "number",
+    "name": "Left Margin (px)",
+    "default": 15,
+    "display_width": "quarter"
+  },
+  "mobile_margin_top": {
+    "type": "number",
+    "name": "Mobile Top Margin (px)",
+    "default": 20,
+    "display_width": "quarter"
+  },
+  "mobile_margin_right": {
+    "type": "number",
+    "name": "Mobile Right Margin (px)",
+    "default": 10,
+    "display_width": "quarter"
+  },
+  "mobile_margin_bottom": {
+    "type": "number",
+    "name": "Mobile Bottom Margin (px)",
+    "default": 20,
+    "display_width": "quarter"
+  },
+  "mobile_margin_left": {
+    "type": "number",
+    "name": "Mobile Left Margin (px)",
+    "default": 10,
+    "display_width": "quarter"
+  },
+  "mobile_title_size": {
+    "type": "number",
+    "name": "Mobile Title Size (px)",
+    "default": 24,
+    "display_width": "half"
+  },
+  "show_disclaimer": {
+    "type": "boolean",
+    "name": "Show Disclaimer",
+    "default": true,
+    "display_width": "half"
+  },
+  "disclaimer_text": {
+    "type": "text",
+    "name": "Disclaimer Text",
+    "default": "Results will vary based on your organisation's specific circumstances. The figures presented are estimates based on industry averages.",
+    "display_width": "full",
+    "visibility": {
+      "controlling_field": "show_disclaimer",
+      "controlling_value_regex": "true",
+      "operator": "EQUAL"
+    }
+  },
+  "disclaimer_size": {
+    "type": "number",
+    "name": "Disclaimer Font Size (px)",
+    "default": 12,
+    "display_width": "half",
+    "visibility": {
+      "controlling_field": "show_disclaimer",
+      "controlling_value_regex": "true",
+      "operator": "EQUAL"
+    }
+  },
+  "disclaimer_color": {
+    "type": "color",
+    "name": "Disclaimer Color",
+    "default": { "color": "#45678a" },
+    "display_width": "half",
+    "visibility": {
+      "controlling_field": "show_disclaimer",
+      "controlling_value_regex": "true",
+      "operator": "EQUAL"
+    }
+  },
+  "disclaimer_alignment": {
+    "type": "choice",
+    "name": "Disclaimer Alignment",
+    "choices": [
+      ["left", "Left"],
+      ["center", "Center"],
+      ["right", "Right"]
+    ],
+    "default": "center",
+    "display_width": "half",
+    "visibility": {
+      "controlling_field": "show_disclaimer",
+      "controlling_value_regex": "true",
+      "operator": "EQUAL"
+    }
+  },
+  "custom_styles": {
+    "type": "text",
+    "name": "Custom CSS",
+    "display_width": "full",
+    "help_text": "Add custom CSS to apply to the iframe"
+  }
+}

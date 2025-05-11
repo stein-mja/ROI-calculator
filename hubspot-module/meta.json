@@ -1,0 +1,14 @@
+{
+  "label": "ROI Calculator",
+  "css_assets": [],
+  "external_js": [],
+  "global": false,
+  "help_text": "Embeds the Identum IAM ROI Calculator as an iframe with customizable appearance and behavior.",
+  "host_template_types": ["PAGE", "BLOG_POST", "BLOG_LISTING"],
+  "icon": "calculator",
+  "js_assets": [],
+  "other_assets": [],
+  "smart_type": "NOT_SMART",
+  "tags": ["calculator", "roi", "iframe", "embed", "iam"],
+  "is_available_for_new_content": true
+}

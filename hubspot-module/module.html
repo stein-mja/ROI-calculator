@@ -1,0 +1,41 @@
+{% set calculator_url = module.calculator_url.value %}
+{% if !calculator_url %}
+  {% set calculator_url = "https://yourdomain.com/roi-calculator" %}
+{% endif %}
+
+{% set frame_height = module.height.value %}
+{% if !frame_height %}
+  {% set frame_height = 800 %}
+{% endif %}
+
+{% set frame_width = module.width.value %}
+{% if !frame_width %}
+  {% set frame_width = "100%" %}
+{% endif %}
+
+{% set bg_color = module.background_color.value %}
+{% if !bg_color %}
+  {% set bg_color = "#ffffff" %}
+{% endif %}
+
+<div class="roi-calculator-container" style="background-color: {{ bg_color }};">
+  <iframe 
+    id="roi-calculator-iframe"
+    src="{{ calculator_url }}" 
+    width="{{ frame_width }}" 
+    height="{{ frame_height }}" 
+    frameborder="0"
+    scrolling="no"
+    style="border: none; overflow: hidden;"
+    allow="clipboard-write">
+  </iframe>
+  
+  <script>
+    // Handle resize messages from the calculator
+    window.addEventListener('message', function(event) {
+      if (event.data && event.data.type === 'roi-calculator-height') {
+        document.getElementById('roi-calculator-iframe').style.height = event.data.height + 'px';
+      }
+    });
+  </script>
+</div>

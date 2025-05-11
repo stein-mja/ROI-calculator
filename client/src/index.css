@@ -1,0 +1,172 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Embedding styles for HubSpot */
+.calculator-embedded-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0;
+  font-family: 'Lato', sans-serif;
+}
+
+.calculator-content {
+  width: 100%;
+  padding: 0 1rem;
+}
+
+/* Styles for embedded mode */
+.embedded-in-hubspot .calculator-content {
+  padding: 0;
+}
+
+:root {
+  --background: 0 0% 100%;
+  --foreground: 210 50% 10%;
+  --muted: 210 40% 96.1%;
+  --muted-foreground: 215 16% 47%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 222.2 84% 4.9%;
+  --card: 0 0% 100%;
+  --card-foreground: 222.2 84% 4.9%;
+  --border: 214.3 31.8% 91.4%;
+  --input: 214.3 31.8% 91.4%;
+  --primary: 344 83% 27%;
+  --primary-foreground: 210 40% 98%;
+  --secondary: 210 40% 96.1%;
+  --secondary-foreground: 222.2 47.4% 11.2%;
+  --accent: 210 40% 96.1%;
+  --accent-foreground: 222.2 47.4% 11.2%;
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 210 40% 98%;
+  --ring: 215 20.2% 65.1%;
+  --radius: 0.5rem;
+
+  /* Identum custom colors */
+  --blackened: 207 96% 10%;
+  --cherry: 344 83% 27%;
+  --midnight: 212 76% 18%;
+  --dark-denim: 208 73% 25%;
+  --id-blue: 212 40% 35%;
+  --bergen-sky: 218 25% 73%;
+  --drizzle: 220 33% 94%;
+  --shroom: 14 26% 92%;
+  --currant: 338 95% 19%;
+}
+
+.dark {
+  --background: 222.2 84% 4.9%;
+  --foreground: 210 40% 98%;
+  --muted: 217.2 32.6% 17.5%;
+  --muted-foreground: 215 20.2% 65.1%;
+  --popover: 222.2 84% 4.9%;
+  --popover-foreground: 210 40% 98%;
+  --card: 222.2 84% 4.9%;
+  --card-foreground: 210 40% 98%;
+  --border: 217.2 32.6% 17.5%;
+  --input: 217.2 32.6% 17.5%;
+  --primary: 344 83% 27%;
+  --primary-foreground: 210 40% 98%;
+  --secondary: 217.2 32.6% 17.5%;
+  --secondary-foreground: 210 40% 98%;
+  --accent: 217.2 32.6% 17.5%;
+  --accent-foreground: 210 40% 98%;
+  --destructive: 0 62.8% 30.6%;
+  --destructive-foreground: 0 0% 98%;
+  --ring: 217.2 32.6% 17.5%;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  html, body {
+    @apply scroll-smooth;
+  }
+  
+  body {
+    @apply font-lato bg-white text-blackened;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-rem font-semibold;
+  }
+
+  .gradient-bg {
+    @apply bg-gradient-to-r from-blackened to-midnight;
+  }
+}
+
+@layer components {
+  .slider-thumb {
+    @apply appearance-none w-6 h-6 rounded-full bg-cherry cursor-pointer transition-transform duration-200 hover:scale-110 hover:shadow-md;
+  }
+  
+  .slider-track {
+    @apply appearance-none h-2 rounded-md bg-drizzle;
+  }
+  
+  .tooltip {
+    @apply relative inline-block;
+  }
+  
+  .tooltip-text {
+    @apply invisible w-[200px] bg-blackened text-white text-center rounded p-2 absolute z-10 bottom-full left-1/2 -ml-[100px] opacity-0 transition-opacity duration-300;
+  }
+  
+  .tooltip:hover .tooltip-text {
+    @apply visible opacity-100;
+  }
+  
+  .form-button {
+    @apply transition-all duration-300 hover:-translate-y-0.5 hover:shadow-md;
+  }
+  
+  @keyframes slideIn {
+    from {
+      transform: translateY(20px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  .animate-slide-in {
+    animation: slideIn 0.5s ease forwards;
+  }
+}
+
+@font-face {
+  font-family: 'REM';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/rem/v2/P5KaDjW2aP3HY5S8L1WD.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: 'REM';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/rem/v2/P5KIDjW2aP3HY_a5uKziLg.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/lato/v24/S6uyw4BMUTPHjx4wXg.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/lato/v24/S6u9w4BMUTPHh6UVSwiPGQ.woff2) format('woff2');
+}
